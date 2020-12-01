@@ -1,6 +1,5 @@
 package com.github.hlund.lingua;
 
-import java.util.Map;
 import java.util.SortedMap;
 
 
@@ -30,7 +29,7 @@ public class PerformanceShowCase {
         SortedMap<Language, Double> m1 = null;
         SortedMap<com.github.pemistahl.lingua.api.Language, Double> m2=null;
         long s1 =0,e1,s2=0,e2;
-        for (int i = 0 ; i < 10; i++) {
+        for (int i = 0 ; i < 1000; i++) {
             if (i == 1) s1 = System.currentTimeMillis();
             for (String s : testStrings)
             m1= l1.computeLanguageConfidenceValues(s);
@@ -43,7 +42,7 @@ public class PerformanceShowCase {
             com.github.pemistahl.lingua.api.LanguageDetectorBuilder
                 .fromAllSpokenLanguages().build();
 
-        for (int i = 0 ; i < 10; i++) {
+        for (int i = 0 ; i < 1000; i++) {
             if (i == 1) s2 = System.currentTimeMillis();
             for (String s : testStrings)
                 m2 = l2.computeLanguageConfidenceValues(s);
