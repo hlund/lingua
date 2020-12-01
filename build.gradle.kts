@@ -306,6 +306,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0")
     implementation("it.unimi.dsi:fastutil:8.4.2")
 
+    //remove when moved
+    implementation("com.fasterxml.jackson.module:jackson-module-jsonSchema:2.11.0")
+
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
     testImplementation("org.assertj:assertj-core:3.17.2")
     testImplementation("io.mockk:mockk:1.10.2")
